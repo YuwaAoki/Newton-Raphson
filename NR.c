@@ -61,6 +61,18 @@ int main()
 		printf("x^2-4, 試行%d, x=%lf\n", n, x);
 	}while(n <= nM && fabs(d) > e );
 
+	x = 1;
+	n = 0;
+	do{
+		n++;
+		y = get_y3( x );
+		y *= -1;
+		dy = get_dy3( x );
+		d = y / dy;
+		x += d;
+		printf("x^3+x^2+x+1, 試行%d, x=%lf\n", n, x);
+	}while(n <= nM && fabs(d) > e );
+
 
 	return 0;
 }
